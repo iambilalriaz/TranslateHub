@@ -1,11 +1,31 @@
+import Select from './Select';
+import TextArea from './TextArea';
+
 const Card = () => {
   return (
-    <div className='card w-96 bg-base-100 shadow-xl'>
+    <div className='card p-0 bg-base-100 shadow-xl'>
       <div className='card-body'>
-        <h2 className='card-title'>Card title!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div className='card-actions justify-end'>
-          <button className='btn btn-primary'>Buy Now</button>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+          <div>
+            <Select
+              label='Select Source Language...'
+              options={[
+                { value: 'en', label: 'English' },
+                { value: 'ur', label: 'Urdu' },
+              ]}
+            />
+            <TextArea placeholder='Write some text...' />
+          </div>
+          <div>
+            <Select
+              label='Select Target Language...'
+              options={[
+                { value: 'en', label: 'English' },
+                { value: 'ur', label: 'Urdu' },
+              ]}
+            />
+            <TextArea placeholder='Write some text...' />
+          </div>
         </div>
       </div>
     </div>

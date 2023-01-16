@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className='relative h-screen bg-gradient'>
       <Particle />
-      <div className='isolate'>
+      <div>
         <Navbar />
         <div className='grid place-items-center h-screen'>
           <Card />
